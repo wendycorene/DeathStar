@@ -16,6 +16,9 @@ class DeathStarWarsSceneUIView: UIView {
     
     override func draw(_ rect: CGRect) {
         // Drawing code
+        let background = UIImage(named: "alderaan")
+        background?.draw(in: rect)
+        
         UIColor.black.setFill()
         UIColor.red.setStroke()
         let (deathStarBody, deathStarPort) = deathStar()
