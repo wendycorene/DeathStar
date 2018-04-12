@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Crq-ld-GVd" customClass="DeathStarWarsSceneUIView" customModule="DeathStar" customModuleProvider="target">
-                                <rect key="frame" x="16" y="39" width="343" height="339"/>
+                                <rect key="frame" x="16" y="39" width="343" height="445"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
