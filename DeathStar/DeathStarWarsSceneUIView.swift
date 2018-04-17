@@ -14,6 +14,21 @@ class DeathStarWarsSceneUIView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     
+    var rotation: CGFloat = 0.0
+    var increment: CGFloat = .pi/90
+    
+    @IBAction func swipe( v: Any) {
+        rotation += increment
+        self.setNeedsDisplay()
+    }
+    
+    @IBAction func swipeLeft ( v: Any) {
+        // this is actually swipeRight.  I'm an idiot and I don't
+        // understand basic fucking directions
+        rotation -= increment
+        self.setNeedsDisplay()
+    }
+    
     override func draw(_ rect: CGRect) {
         // Drawing code
         let background = UIImage(named: "alderaan")
@@ -28,7 +43,7 @@ class DeathStarWarsSceneUIView: UIView {
         deathStarPort.fill()
         deathStarPort.stroke()
         
-        let rotate = CGAffineTransform(rotationAngle: .pi/8.0)
+        let rotate = CGAffineTransform(rotationAngle: rotation)
         let move = CGAffineTransform(translationX: 100, y: 100)
         let tran = move.concatenating(rotate)
         deathStarBody.apply(tran)
